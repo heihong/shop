@@ -1,0 +1,9 @@
+.width-card {
+  max-width: 400px;
+  max-height: 240px;
+  margin: 10px;
+}
+
+.img-card {
+  max-height: 200px;
+}

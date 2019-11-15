@@ -1,1 +1,4 @@
-<p>home works!</p>
+<div class="collection-content">
+  <app-book-card *ngFor="let bookEl of bookList" [book]="bookEl" (click)="navigateTo(bookEl.id)"></app-book-card>
+</div>
+

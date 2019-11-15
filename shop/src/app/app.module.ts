@@ -11,13 +11,24 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+
+
 import { HomeComponent } from './home/home.component';
+import { BookCardComponent } from './book-card/book-card.component';
+import {HttpClientModule} from "@angular/common/http";
+import {BookListService} from "./services/book-list.service";
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service";
+import { BookItemListComponent } from './book-item-list/book-item-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    HomeComponent
+    HomeComponent,
+    BookCardComponent,
+    BookItemListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +39,14 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryBookListService, { dataEncapsulation: false },
+    )
   ],
-  providers: [],
+  providers: [BookListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

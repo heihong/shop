@@ -1,17 +1,19 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
+import {BookList} from "../models/book.model";
 
 @Injectable({
   providedIn: 'root',
 })
-export class InMemoryBooksService implements InMemoryDbService {
+export class InMemoryBookListService implements InMemoryDbService {
 
   createDb() {
-    const books = [
+    const bookList: BookList[] = [
       {
         id: 1,
         title : 'Harry Potter',
-        bookItems : [
+        cover: 'harryPotter.jpg',
+        bookItemList : [
           {
             id: 1,
             title: "Henri Potier à l'école des sorciers",
@@ -52,7 +54,8 @@ export class InMemoryBooksService implements InMemoryDbService {
       {
         id: 2,
         title : 'Twilight',
-        bookItems : [
+        cover: 'twilight.jpg',
+        bookItemList : [
           {
             id: 1,
             title: "Fascination",
@@ -76,6 +79,6 @@ export class InMemoryBooksService implements InMemoryDbService {
         ]
       }
     ];
-    return {books};
+    return {bookList};
   }
 }
