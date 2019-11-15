@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {BookList} from "../models/book.model";
 import {ActivatedRoute} from "@angular/router";
+import {filter, map} from "rxjs/operators";
 
 @Component({
   selector: 'app-book-item-list',

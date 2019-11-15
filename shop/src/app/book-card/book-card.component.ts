@@ -7,7 +7,7 @@ import {BookList} from "../models/book.model";
   styleUrls: ['./book-card.component.css']
 })
 export class BookCardComponent implements OnInit {
-  @Input() book: BookList[];
+  @Input() bookList: BookList[];
   constructor() { }
 
   ngOnInit() {
