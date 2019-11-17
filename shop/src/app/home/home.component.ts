@@ -20,9 +20,4 @@ export class HomeComponent implements OnInit {
         this.bookList = data
       );
   }
-
-  navigateTo(id) {
-    this.router.navigate(['/home', id ]);
-  }
-
 }

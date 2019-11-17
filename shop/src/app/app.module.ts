@@ -20,15 +20,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {BookListService} from "./services/book-list.service";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service";
-import { BookItemListComponent } from './book-item-list/book-item-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     HomeComponent,
-    BookCardComponent,
-    BookItemListComponent
+    BookCardComponent
   ],
   imports: [
     BrowserModule,
