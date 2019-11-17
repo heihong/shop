@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+  <p>Etes-vous sur de vouloir ajouter <strong>{{data.title}}</strong> au panier ?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" color="accent">Non</button>
+  <button mat-raised-button [mat-dialog-close]="" cdkFocusInitial color="primary">Oui</button>
+</div>

@@ -5,10 +5,10 @@
       {{bookList.title}}
     </h1>
     <h2>
-      {{bookList.price}}
+      {{bookList.price}} €
     </h2>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">Ajouter au panier</button>
+    <button mat-raised-button color="primary" (click)="addToCart(bookList.title)">Ajouter au panier</button>
   </mat-card-actions>
 </mat-card>

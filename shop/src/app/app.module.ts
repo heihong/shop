@@ -12,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import { HomeComponent } from './home/home.component';
@@ -20,6 +21,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {BookListService} from "./services/book-list.service";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service";
+import { CartComponent } from './cart/cart.component';
+import { PopinAddToCartComponent } from './popin-add-to-cart/popin-add-to-cart.component';
 
 
 @NgModule({
@@ -27,7 +30,9 @@ import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service"
     AppComponent,
     MainNavComponent,
     HomeComponent,
-    BookCardComponent
+    BookCardComponent,
+    CartComponent,
+    PopinAddToCartComponent
   ],
   imports: [
     BrowserModule,
@@ -40,11 +45,13 @@ import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service"
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatDialogModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryBookListService, { dataEncapsulation: false },
     )
   ],
+  entryComponents: [PopinAddToCartComponent],
   providers: [BookListService],
   bootstrap: [AppComponent]
 })
