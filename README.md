@@ -1,6 +1,6 @@
 ## Exercise
-* Creér une home page , une popin,  afficher la liste des produits.
-* Application Shop qui vend des livres harry potter qu'on peut ajouter et supprimer de son panier.
+* Create a home page , a popin,  show all products.
+* The Shop application sell some harry potter books.
 
 ## Development server
 * Run `cd shop`
