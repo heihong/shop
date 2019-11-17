@@ -5,7 +5,7 @@ import {CartList} from "../models/cart.model";
 //service
 
 describe('CartService', () => {
-  let service : CartService;
+  let service: CartService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
