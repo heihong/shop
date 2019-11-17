@@ -1,0 +1,17 @@
+<mat-card class="width-card">
+  <img mat-card-image class="img-card" src="./assets/{{cart.cover}}" alt="Photo of BookList">
+  <mat-card-content>
+    <h3>
+      {{cart.title}}
+    </h3>
+    <p>
+      {{cart.price}} €
+    </p>
+    <p>
+      Quantity : {{cart.quantity}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="deleteToCart(cart.id)">delete to cart</button>
+  </mat-card-actions>
+</mat-card>

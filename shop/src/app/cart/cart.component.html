@@ -1,1 +1,6 @@
-<p>cart works!</p>
+<h2 *ngIf="cartList.length === 0" class="margin-small"> Empty cart </h2>
+<h2 *ngIf="cartList.length !== 0" class="margin-small"> Total Cart : {{total}} €</h2>
+<div class="collection-content">
+  <app-cart-card  *ngFor="let cartEl of cartList" [cart]="cartEl" (onCartDelected)="deleteToCart($event)"></app-cart-card>
+</div>
+

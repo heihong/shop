@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BookList} from "../models/book.model";
 import {PopinAddToCartComponent} from "../popin-add-to-cart/popin-add-to-cart.component";
 import {MatDialog} from "@angular/material/dialog";
+import {CartService} from "../services/cart.service";
 
 @Component({
   selector: 'app-book-card',
@@ -9,20 +10,20 @@ import {MatDialog} from "@angular/material/dialog";
   styleUrls: ['./book-card.component.css']
 })
 export class BookCardComponent implements OnInit {
-  @Input() bookList: BookList[];
-  constructor(public dialog: MatDialog) { }
+  @Input() book: BookList;
+  constructor(public dialog: MatDialog , private cartService: CartService) { }
 
   ngOnInit() {
 
   }
-  addToCart(title) {
+  addToCart(book: BookList) {
     const dialogRef = this.dialog.open(PopinAddToCartComponent, {
       width: '250px',
-      data: {title: title}
+      data: {bookData: book}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+        this.cartService.addToCart(result);
     });
   }
 

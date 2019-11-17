@@ -1,14 +1,14 @@
 <mat-card class="width-card">
-  <img mat-card-image class="img-card" src="./assets/{{bookList.cover}}" alt="Photo of BookList">
+  <img mat-card-image class="img-card" src="./assets/{{book.cover}}" alt="Photo of BookList">
   <mat-card-content>
-    <h1>
-      {{bookList.title}}
-    </h1>
-    <h2>
-      {{bookList.price}} €
-    </h2>
+    <h3>
+      {{book.title}}
+    </h3>
+    <p>
+      {{book.price}} €
+    </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="addToCart(bookList.title)">Ajouter au panier</button>
+    <button mat-raised-button color="primary" (click)="addToCart(book)">add to cart</button>
   </mat-card-actions>
 </mat-card>

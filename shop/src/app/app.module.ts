@@ -23,6 +23,8 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryBookListService} from "./dataMemory/in-memory-book-list.service";
 import { CartComponent } from './cart/cart.component';
 import { PopinAddToCartComponent } from './popin-add-to-cart/popin-add-to-cart.component';
+import {CartService} from "./services/cart.service";
+import { CartCardComponent } from './cart-card/cart-card.component';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { PopinAddToCartComponent } from './popin-add-to-cart/popin-add-to-cart.c
     HomeComponent,
     BookCardComponent,
     CartComponent,
-    PopinAddToCartComponent
+    PopinAddToCartComponent,
+    CartCardComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,7 @@ import { PopinAddToCartComponent } from './popin-add-to-cart/popin-add-to-cart.c
     )
   ],
   entryComponents: [PopinAddToCartComponent],
-  providers: [BookListService],
+  providers: [BookListService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
