@@ -3,8 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-popin-add-to-cart',
-  templateUrl: './popin-add-to-cart.component.html',
-  styleUrls: ['./popin-add-to-cart.component.css']
+  templateUrl: './popin-add-to-cart.component.html'
 })
 export class PopinAddToCartComponent implements OnInit {
 

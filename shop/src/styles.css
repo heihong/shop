@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.width-card {
+  max-width: 150px;
+  max-height: 400px;
+  margin: 10px;
+}
+
+.img-card {
+  max-height: 200px;
+}
+
+.collection-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.margin-small {
+  margin: 10px;
+}
+
